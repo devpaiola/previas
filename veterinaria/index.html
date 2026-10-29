@@ -197,7 +197,7 @@ if(!RM){
  // tilt + glow
  if(matchMedia('(hover:hover)').matches)document.querySelectorAll('.tile').forEach(t=>{t.addEventListener('pointermove',e=>{const r=t.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top;t.style.setProperty('--x',x+'px');t.style.setProperty('--y',y+'px');t.style.transform=`perspective(900px) rotateX(${(y/r.height-.5)*-8}deg) rotateY(${(x/r.width-.5)*8}deg)`});t.addEventListener('pointerleave',()=>t.style.transform='')});
  // split words
- document.querySelectorAll('.split-t').forEach(s=>{s.innerHTML=s.textContent.split(' ').map(w=>`<span class="wd">${w} </span>`).join('')});
+ document.querySelectorAll('.split-t').forEach(s=>{const g=s.classList.contains('grad');s.classList.remove('grad');s.innerHTML=s.textContent.split(' ').map(w=>`<span class="wd${g?' grad':''}">${w} </span>`).join('')});
 }
 addEventListener('DOMContentLoaded',()=>{
  if(RM||!window.gsap){document.documentElement.classList.remove('js');return}
