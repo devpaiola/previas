@@ -1,0 +1,218 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Barbearia Navalha de Ouro | Site de demonstração</title>
+<meta name="description" content="Barbearia com corte, barba, combo e sobrancelha. Agende pelo WhatsApp. Site de demonstração com empresa fictícia.">
+<meta property="og:title" content="Barbearia Navalha de Ouro"><meta property="og:image" content="img/f2.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/f2.jpg">
+<style>
+:root{--ink:#0a0806;--mut:#a89a88;--teal:#f59e0b;--teal2:#fbbf24;--amb:#d97706;--bg:#0d0b09;--card:#16120e;--line:#2a2219}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:"Plus Jakarta Sans",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
+.w{max-width:1180px;margin:auto;padding:0 20px}
+.demo-bar{background:var(--ink);color:#cfe;font-size:.75rem;text-align:center;padding:6px 12px;letter-spacing:.02em}
+/* navbar */
+.nav{position:fixed;left:50%;top:44px;transform:translateX(-50%);z-index:50;width:min(1100px,calc(100% - 24px));display:flex;align-items:center;justify-content:space-between;padding:10px 12px 10px 20px;border-radius:999px;transition:all .45s cubic-bezier(.2,.8,.2,1);border:1px solid transparent}
+.nav.scrolled{top:12px;background:rgba(255,255,255,.72);backdrop-filter:blur(14px) saturate(160%);-webkit-backdrop-filter:blur(14px) saturate(160%);border-color:rgba(245,158,11,.12);box-shadow:0 10px 30px -12px rgba(0,0,0,.25)}
+.logo{font-weight:800;font-size:1.1rem;display:flex;gap:8px;align-items:center;color:#fff;transition:color .3s}.nav.scrolled .logo{color:var(--ink)}
+.logo i{width:30px;height:30px;border-radius:10px;background:linear-gradient(135deg,var(--teal),var(--amb));display:grid;place-items:center;font-style:normal;font-size:1rem}
+.links{display:none;gap:4px}.links a{padding:8px 14px;border-radius:999px;font-size:.9rem;font-weight:500;color:#fff;transition:.25s}.nav.scrolled .links a{color:var(--ink)}
+.links a:hover{background:rgba(245,158,11,.15)}
+/* shimmer button */
+.shimmer{position:relative;display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border-radius:999px;font-weight:700;color:#fff;background:linear-gradient(135deg,#f59e0b,#b45309);overflow:hidden;isolation:isolate;box-shadow:0 10px 30px -8px rgba(245,158,11,.55),inset 0 1px 0 rgba(255,255,255,.25);transition:transform .25s}
+.shimmer::before{content:"";position:absolute;inset:-2px;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.55) 50%,transparent 70%);transform:translateX(-120%);animation:sh 2.8s infinite;z-index:-1}
+.shimmer:hover{transform:translateY(-2px) scale(1.02)}.shimmer.sm{padding:10px 18px;font-size:.88rem}
+@keyframes sh{60%,100%{transform:translateX(120%)}}
+.ghost{display:inline-flex;padding:14px 24px;border-radius:999px;font-weight:600;color:#fff;border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(6px);transition:.25s}.ghost:hover{background:rgba(255,255,255,.12)}
+/* hero */
+.hero{position:relative;min-height:100svh;display:grid;place-items:center;overflow:hidden;background:#070504;color:#fff;padding:140px 0 80px}
+.hero .bgimg{position:absolute;inset:0;background:url(img/f2.jpg) center/cover;opacity:.32;transform:scale(1.1)}
+.aurora{position:absolute;inset:-20%;filter:blur(70px);opacity:.75;pointer-events:none}
+.aurora span{position:absolute;border-radius:50%;mix-blend-mode:screen;animation:float 18s ease-in-out infinite alternate}
+.aurora span:nth-child(1){width:55vw;height:55vw;left:5%;top:10%;background:#b45309}
+.aurora span:nth-child(2){width:45vw;height:45vw;right:0;top:0;background:#78350f;animation-duration:22s;opacity:.6}
+.aurora span:nth-child(3){width:40vw;height:40vw;left:35%;bottom:0;background:#f59e0b;animation-duration:26s;opacity:.55}
+@keyframes float{0%{transform:translate(0,0) scale(1)}50%{transform:translate(8%,-6%) scale(1.15)}100%{transform:translate(-6%,8%) scale(.95)}}
+.spot{position:absolute;inset:0;background:radial-gradient(600px circle at var(--mx,50%) var(--my,40%),rgba(255,255,255,.12),transparent 60%);pointer-events:none}
+.grain{position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.08) 1px,transparent 1px);background-size:22px 22px;mask-image:radial-gradient(ellipse at center,#000 30%,transparent 75%);pointer-events:none}
+.hero-c{position:relative;text-align:center;max-width:880px}
+.pill{display:inline-flex;gap:8px;align-items:center;padding:6px 14px 6px 6px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);font-size:.85rem;backdrop-filter:blur(8px)}
+.pill b{background:var(--teal);color:#070504;padding:2px 10px;border-radius:999px;font-size:.75rem}
+.hero h1{font-size:clamp(2.4rem,6.5vw,4.8rem);line-height:1.04;letter-spacing:-.035em;font-weight:800;margin:22px 0 18px}
+.hero h1 .wd{display:inline-block;white-space:pre}
+.grad{background:linear-gradient(90deg,#fde68a,#f59e0b,#fde68a);background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:gr 6s linear infinite}
+@keyframes gr{to{background-position:200% center}}
+.hero p.lead{font-size:clamp(1rem,2vw,1.2rem);color:#d6cabb;max-width:620px;margin:0 auto 32px}
+.cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.trust{display:flex;gap:28px;justify-content:center;margin-top:46px;flex-wrap:wrap;color:#d6cabb;font-size:.9rem}
+.trust strong{display:block;font-size:1.8rem;color:#fff;font-weight:800;letter-spacing:-.02em}
+/* marquee */
+.marq{background:var(--ink);color:#e9dcc8;overflow:hidden;padding:18px 0;border-block:1px solid rgba(255,255,255,.06)}
+.track{display:flex;gap:48px;width:max-content;animation:mq 30s linear infinite}
+.track span{font-weight:700;font-size:1.05rem;white-space:nowrap;display:flex;gap:48px;align-items:center}.track span::after{content:"✦";color:var(--amb)}
+@keyframes mq{to{transform:translateX(-50%)}}
+.marq:hover .track,.tm:hover .track{animation-play-state:paused}
+/* sections */
+section{padding:96px 0}
+.eyebrow{display:inline-block;font-size:.8rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--teal2);background:rgba(245,158,11,.1);padding:6px 12px;border-radius:999px}
+h2{font-size:clamp(1.9rem,4vw,3rem);letter-spacing:-.03em;line-height:1.1;margin:14px 0 14px;font-weight:800}
+.sub{color:var(--mut);max-width:560px}.head{margin-bottom:48px}.center{text-align:center}.center .sub{margin:auto}
+/* bento */
+.bento{display:grid;gap:16px;grid-template-columns:1fr}
+.tile{position:relative;background:var(--card);border:1px solid var(--line);border-radius:24px;padding:28px;overflow:hidden;transform-style:preserve-3d;transition:transform .2s ease,box-shadow .3s;will-change:transform}
+.tile::before{content:"";position:absolute;inset:0;border-radius:inherit;background:radial-gradient(400px circle at var(--x,50%) var(--y,50%),rgba(245,158,11,.18),transparent 45%);opacity:0;transition:opacity .3s;pointer-events:none}
+.tile:hover::before{opacity:1}.tile:hover{box-shadow:0 30px 60px -30px rgba(245,158,11,.45)}
+.tile .ic{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;font-size:1.5rem;background:linear-gradient(135deg,#2a1d10,#3d2a12);margin-bottom:18px}
+.tile h3{font-size:1.25rem;margin-bottom:6px;letter-spacing:-.01em}.tile p{color:var(--mut);font-size:.95rem}
+.tile.img{padding:0;min-height:260px;color:#fff}.tile.img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.tile.img:hover img{transform:scale(1.06)}.tile.img .ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(7,5,4,.85),transparent 60%);display:flex;flex-direction:column;justify-content:flex-end;padding:28px}
+.tile.img p{color:#d6cabb}
+.tile.dark{background:linear-gradient(160deg,#0b1f1c,#3b2410);color:#fff;border-color:transparent}.tile.dark p{color:#d6cabb}
+.tag{display:inline-block;margin-top:14px;font-size:.78rem;font-weight:700;color:#fde68a;background:rgba(245,158,11,.15);padding:4px 10px;border-radius:999px}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#ef4444;margin-right:6px;box-shadow:0 0 0 0 rgba(239,68,68,.7);animation:pulse 1.8s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(239,68,68,0)}100%{box-shadow:0 0 0 0 rgba(239,68,68,0)}}
+/* about */
+.about{display:grid;gap:48px;align-items:center}
+.stack{position:relative;aspect-ratio:4/4.2}.stack img{position:absolute;border-radius:24px;object-fit:cover;box-shadow:0 30px 60px -25px rgba(0,0,0,.5)}
+.stack .a{width:78%;height:80%;left:0;top:0}.stack .b{width:52%;height:52%;right:0;bottom:0;border:6px solid var(--bg)}
+.badge{position:absolute;left:8%;bottom:6%;background:#fff;border-radius:18px;padding:14px 18px;box-shadow:0 20px 40px -15px rgba(0,0,0,.3);display:flex;gap:12px;align-items:center;font-size:.85rem}
+.badge strong{font-size:1.5rem;color:var(--teal2)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:28px}
+.stats div{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px;text-align:center}
+.stats strong{display:block;font-size:1.9rem;letter-spacing:-.03em;color:var(--teal2);font-weight:800}.stats span{font-size:.82rem;color:var(--mut)}
+.checks{list-style:none;margin-top:20px;display:grid;gap:10px}.checks li{display:flex;gap:10px}.checks li::before{content:"✓";color:#fff;background:var(--teal);border-radius:50%;width:22px;height:22px;flex:none;display:grid;place-items:center;font-size:.75rem;font-weight:800}
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.gal figure{overflow:hidden;border-radius:20px;aspect-ratio:1}
+.gal img{width:100%;height:100%;object-fit:cover;transition:transform .7s,filter .7s;filter:saturate(.9)}.gal figure:hover img{transform:scale(1.08);filter:saturate(1.15)}
+/* testimonials */
+.tm{overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+.tm .track{gap:18px;animation-duration:40s}.tm .row2 .track{animation-direction:reverse}.tm .row2{margin-top:18px}
+.rev{width:340px;background:#fff;border:1px solid var(--line);border-radius:22px;padding:22px;flex:none}
+.rev .rh{display:flex;gap:12px;align-items:center;margin-bottom:10px}.av{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;font-weight:800;color:#fff;background:linear-gradient(135deg,var(--teal),var(--teal2))}
+.rev small{color:var(--amb);font-weight:700}.rev p{color:#d6cabb;font-size:.95rem}
+.note{font-size:.8rem;color:var(--mut);margin-top:10px}
+/* hours + contact */
+.split{display:grid;gap:20px}
+.panel{background:#fff;border:1px solid var(--line);border-radius:24px;padding:30px}
+.hr{display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px dashed var(--line)}.hr:last-child{border:0}.hr b{font-weight:700}
+.open{display:inline-flex;align-items:center;gap:8px;font-size:.85rem;font-weight:700;color:#15803d;background:#dcfce7;padding:4px 12px;border-radius:999px;margin-bottom:10px}
+.open i{width:8px;height:8px;border-radius:50%;background:#22c55e;animation:pulse 1.8s infinite}
+.map{min-height:260px;border-radius:24px;background:radial-gradient(circle at 50% 50%,rgba(245,158,11,.25),transparent 40%),repeating-linear-gradient(0deg,#221b14 0 1px,transparent 1px 32px),repeating-linear-gradient(90deg,#221b14 0 1px,transparent 1px 32px),#fff;border:1px solid var(--line);display:grid;place-items:center;text-align:center;color:var(--mut);padding:20px}
+.pin{font-size:2.4rem;animation:bob 2.4s ease-in-out infinite}@keyframes bob{50%{transform:translateY(-8px)}}
+.final{position:relative;overflow:hidden;border-radius:32px;background:#070504;color:#fff;text-align:center;padding:72px 24px;margin-top:20px}
+.final h2{color:#fff}.final p{color:#d6cabb;margin-bottom:28px}
+footer{text-align:center;padding:40px 20px 90px;color:var(--mut);font-size:.88rem}footer small{display:block;margin-top:6px;opacity:.8}
+.wa{position:fixed;right:18px;bottom:18px;width:60px;height:60px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 10px 30px -6px rgba(37,211,102,.7);z-index:60;transition:transform .25s}.wa:hover{transform:scale(1.08)}
+.wa::after{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid #25d366;animation:ring 2.2s infinite}@keyframes ring{to{transform:scale(1.6);opacity:0}}
+.prog{position:fixed;top:0;left:0;height:3px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,var(--teal),var(--amb));z-index:70}
+/* reveal init (only when JS + motion ok) */
+.js .rv{opacity:0;transform:translateY(28px);filter:blur(6px)}
+@media(min-width:760px){.links{display:flex}.bento{grid-template-columns:repeat(3,1fr);grid-auto-rows:minmax(200px,auto)}.b-wide{grid-column:span 2}.b-tall{grid-row:span 2}
+.about{grid-template-columns:1fr 1fr}.gal{grid-template-columns:repeat(4,1fr)}.gal figure:first-child{grid-column:span 2;grid-row:span 2}.split{grid-template-columns:1fr 1.2fr}}
+@media(max-width:759px){.nav .shimmer.sm{padding:9px 14px;font-size:.8rem}.trust{gap:18px}section{padding:72px 0}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.js .rv{opacity:1;transform:none;filter:none}html{scroll-behavior:auto}}
+body{color:#efe6da}h1,h2,h3,.logo{font-family:Oswald,"Plus Jakarta Sans",sans-serif;text-transform:uppercase;letter-spacing:.01em!important}.hero h1{font-weight:700;line-height:1.02}h2{font-weight:600}
+.demo-bar{background:#000;color:#fde68a}.nav.scrolled{background:rgba(13,11,9,.75);border-color:rgba(245,158,11,.18)}.nav.scrolled .logo,.nav.scrolled .links a{color:#fff}.logo i{color:#0a0806}
+.shimmer{color:#160d02}.shimmer svg{fill:#160d02}.eyebrow{color:#fbbf24;background:rgba(245,158,11,.12)}
+.tile,.stats div,.panel,.rev,.map,.badge{background:var(--card)!important;color:#efe6da}.badge{border:1px solid var(--line)}.stats strong,.badge strong{color:#fbbf24}.av{color:#160d02}
+.alt{background:#110e0b}.marq{background:#000}.open{color:#86efac;background:rgba(34,197,94,.12)}.final{background:#000;border:1px solid var(--line)}.checks li::before{color:#160d02}
+.price{display:block;margin-top:12px;font-family:Oswald,sans-serif;font-size:1.5rem;color:#fbbf24}.price small{font-size:.75rem;color:var(--mut);font-family:"Plus Jakarta Sans",sans-serif}
+.pole{position:absolute;right:22px;top:22px;width:12px;height:56px;border-radius:6px;background:repeating-linear-gradient(45deg,#b91c1c 0 6px,#fff 6px 12px,#1d4ed8 12px 18px,#fff 18px 24px);background-size:100% 34px;animation:pole 1.4s linear infinite;opacity:.85}@keyframes pole{to{background-position:0 34px}}
+</style></head><body>
+<div class="prog" id="prog"></div>
+<div class="demo-bar">⚠️ Site de demonstração — empresa, endereço, telefones e avaliações são fictícios.</div>
+<nav class="nav" id="nav"><a href="#" class="logo"><i>✂</i>Navalha de Ouro</a>
+<div class="links"><a href="#servicos">Serviços</a><a href="#sobre">Sobre</a><a href="#galeria">Galeria</a><a href="#depoimentos">Depoimentos</a><a href="#contato">Contato</a></div>
+<a class="shimmer sm" href="https://wa.me/5514900000000?text=Olá!%20Quero%20agendar%20um%20horário%20na%20Navalha%20de%20Ouro." target="_blank" rel="noopener">Agendar</a></nav>
+<header class="hero" id="hero"><div class="bgimg" id="bgimg"></div><div class="aurora"><span></span><span></span><span></span></div><div class="grain"></div><div class="spot"></div>
+<div class="w hero-c">
+<span class="pill hi"><b>Novo</b> Agende pelo WhatsApp em 1 minuto</span>
+<h1 id="h1"><span class="split-t">Estilo afiado,</span><br><span class="grad split-t">tradição de barbeiro.</span></h1>
+<p class="lead hi">Corte, barba e acabamento na navalha com toalha quente, cerveja gelada e aquele papo bom. Sem fila: hora marcada é hora atendida.</p>
+<div class="cta hi"><a class="shimmer" href="https://wa.me/5514900000000?text=Olá!%20Quero%20agendar%20um%20horário%20na%20Navalha%20de%20Ouro." target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 32 32" fill="#fff"><path d="M16 3C9 3 3.4 8.6 3.4 15.5c0 2.4.7 4.7 1.9 6.7L3 29l7-2.2c1.9 1 4 1.6 6 1.6 7 0 12.6-5.6 12.6-12.5S23 3 16 3zm6.3 17.6c-.3.8-1.5 1.5-2.1 1.6-.6.1-1.2.1-1.9-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3.1s.8-2.2 1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5.2.6.8 2 .9 2.1.1.1.1.3 0 .5-.1.2-.1.3-.3.5l-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.6 2.1 1.1 1 2 1.3 2.3 1.4.3.1.5.1.6-.1.2-.2.7-.8.9-1.1.2-.3.4-.2.6-.1.3.1 1.6.8 1.9.9.3.1.5.2.5.3.1.2.1.8-.1 1.5z"/></svg>Agendar horário</a><a class="ghost" href="#servicos">Ver serviços</a></div>
+<div class="trust hi"><div><strong><span class="cnt" data-to="4.9" data-dec="1">0</span>★</strong>avaliação média</div><div><strong>+<span class="cnt" data-to="12">0</span> mil</strong>cortes feitos</div><div><strong>+<span class="cnt" data-to="7">0</span> anos</strong>na navalha</div></div>
+</div></header>
+<div class="marq" aria-hidden="true"><div class="track"><span>✂️ Corte</span><span>🪒 Barba na navalha</span><span>🔥 Toalha quente</span><span>💈 Degradê</span><span>🍺 Cerveja gelada</span><span>👁️ Sobrancelha</span><span>✂️ Corte</span><span>🪒 Barba na navalha</span><span>🔥 Toalha quente</span><span>💈 Degradê</span><span>🍺 Cerveja gelada</span><span>👁️ Sobrancelha</span></div></div>
+<main>
+<section id="servicos"><div class="w">
+<div class="head rv"><span class="eyebrow">Serviços</span><h2>Do degradê à barba<br>de respeito.</h2><p class="sub">Valores fictícios, apenas para demonstração.</p></div>
+<div class="bento">
+<div class="tile img b-wide b-tall rv"><img src="img/f5.jpg" alt="Foto ilustrativa de corte masculino" loading="lazy"><div class="ov"><span class="eyebrow" style="background:rgba(245,158,11,.25);color:#fff;width:max-content">Mais pedido</span><h3 style="font-size:2rem;margin-top:10px">Combo corte + barba</h3><p>O pacote completo: corte na tesoura ou máquina, barba na navalha com toalha quente e finalização.</p><span class="price">R$ 00 <small>(fictício)</small></span></div></div>
+<div class="tile rv"><div class="ic">✂️</div><h3>Corte</h3><p>Social, degradê, navalhado ou tesoura — com lavagem e finalização.</p><span class="price">R$ 00 <small>(fictício)</small></span></div>
+<div class="tile rv"><div class="ic">🪒</div><h3>Barba</h3><p>Desenho, navalha, toalha quente e óleo hidratante.</p><span class="price">R$ 00 <small>(fictício)</small></span></div>
+<div class="tile rv"><div class="ic">👁️</div><h3>Sobrancelha</h3><p>Limpeza e alinhamento na navalha, discreto e natural.</p><span class="price">R$ 00 <small>(fictício)</small></span></div>
+<div class="tile rv"><div class="ic">🧔</div><h3>Pigmentação</h3><p>Preenche falhas da barba e do cabelo com acabamento natural.</p></div>
+<div class="tile dark rv"><div class="pole"></div><div class="ic">💈</div><h3>Dia do Noivo</h3><p>Corte, barba e cuidados com a pele para o grande dia.</p><span class="tag"><span class="dot"></span>Vagas no sábado</span></div>
+</div></div></section>
+<section id="sobre" class="alt"><div class="w about">
+<div class="stack rv"><img class="a" src="img/f6.jpg" alt="Foto ilustrativa da cadeira de barbeiro" loading="lazy"><img class="b" src="img/f3.jpg" alt="Foto ilustrativa de ferramentas" loading="lazy"><div class="badge"><strong>★</strong><div><b>Hora marcada</b><br>sem fila, sem espera</div></div></div>
+<div class="rv"><span class="eyebrow">Sobre nós</span><h2>Barbearia clássica com pegada moderna.</h2>
+<p class="sub">Barbeiros experientes, ferramentas esterilizadas e um ambiente feito para você relaxar enquanto cuida do visual.</p>
+<ul class="checks"><li>Navalha descartável em todo atendimento</li><li>Toalha quente e produtos premium</li><li>Wi-Fi, café e cerveja gelada por conta da casa</li></ul>
+<div class="stats"><div><strong>+<span class="cnt" data-to="7">0</span></strong><span>anos de casa</span></div><div><strong>+<span class="cnt" data-to="12">0</span> mil</strong><span>cortes feitos</span></div><div><strong><span class="cnt" data-to="4.9" data-dec="1">0</span>★</strong><span>avaliação média</span></div></div></div>
+</div></section>
+<section id="galeria"><div class="w">
+<div class="head center rv"><span class="eyebrow">Galeria</span><h2>Trabalhos na cadeira</h2></div>
+<div class="gal"><figure class="rv"><img src="img/f1.jpg" alt="Foto ilustrativa 1" loading="lazy"></figure><figure class="rv"><img src="img/f4.jpg" alt="Foto ilustrativa 2" loading="lazy"></figure><figure class="rv"><img src="img/f8.jpg" alt="Foto ilustrativa 3" loading="lazy"></figure><figure class="rv"><img src="img/f3.jpg" alt="Foto ilustrativa 4" loading="lazy"></figure><figure class="rv"><img src="img/f6.jpg" alt="Foto ilustrativa 5" loading="lazy"></figure></div>
+<p class="note center">Fotos ilustrativas (Unsplash).</p>
+</div></section>
+<section id="depoimentos" class="alt" style="overflow:hidden"><div class="w head center rv"><span class="eyebrow">Depoimentos</span><h2>Quem senta, volta</h2><p class="note">Avaliações de exemplo, apenas para demonstração.</p></div>
+<div class="tm"><div class="track" id="t1"></div></div><div class="tm row2"><div class="track" id="t2"></div></div>
+</section>
+<section id="contato"><div class="w">
+<div class="head center rv"><span class="eyebrow">Visite a gente</span><h2>Horários e como chegar</h2></div>
+<div class="split"><div class="panel rv"><span class="open"><i></i>Aberto hoje</span>
+<div class="hr"><span>Terça a sexta</span><b>9h às 20h</b></div><div class="hr"><span>Sábado</span><b>8h às 18h</b></div><div class="hr"><span>Domingo e segunda</span><b>Fechado</b></div>
+<p style="margin-top:18px;color:var(--mut)">📞 (14) 90000-0000<br>✉️ contato@exemplo.com.br</p></div>
+<div class="map rv"><div><div class="pin">📍</div><b>Mapa do Google aqui</b><br>Rua Exemplo, 000 – Centro – Cidade/SP<br><small>(endereço fictício)</small></div></div></div>
+<div class="final rv"><div class="aurora" style="opacity:.5"><span></span><span></span><span></span></div><div style="position:relative"><h2>Bora dar um trato no visual?</h2><p>Escolha o horário e confirme pelo WhatsApp.</p><a class="shimmer" href="https://wa.me/5514900000000?text=Olá!%20Quero%20agendar%20um%20horário%20na%20Navalha%20de%20Ouro." target="_blank" rel="noopener">Agendar no WhatsApp →</a></div></div>
+</div></section>
+</main>
+<footer>© 2026 Barbearia Navalha de Ouro — empresa fictícia<small>Site de demonstração, criado por Fabrício</small></footer>
+<a class="wa" href="https://wa.me/5514900000000?text=Olá!%20Quero%20agendar%20um%20horário%20na%20Navalha%20de%20Ouro." target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="32" height="32" viewBox="0 0 32 32" fill="#fff"><path d="M16 3C9 3 3.4 8.6 3.4 15.5c0 2.4.7 4.7 1.9 6.7L3 29l7-2.2c1.9 1 4 1.6 6 1.6 7 0 12.6-5.6 12.6-12.5S23 3 16 3zm6.3 17.6c-.3.8-1.5 1.5-2.1 1.6-.6.1-1.2.1-1.9-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3.1s.8-2.2 1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5.2.6.8 2 .9 2.1.1.1.1.3 0 .5-.1.2-.1.3-.3.5l-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.6 2.1 1.1 1 2 1.3 2.3 1.4.3.1.5.1.6-.1.2-.2.7-.8.9-1.1.2-.3.4-.2.6-.1.3.1 1.6.8 1.9.9.3.1.5.2.5.3.1.2.1.8-.1 1.5z"/></svg></a>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+<script>
+const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+if(!RM)document.documentElement.classList.add('js');
+// testimonials
+const R=[["L","Lucas M.","Melhor degradê da cidade, e o barbeiro ainda manja de futebol."],["G","Gustavo P.","Barba na toalha quente é outro nível. Saí novo!"],["T","Thiago R.","Agendei pelo WhatsApp e fui atendido na hora certa, sem enrolação."],["D","Diego S.","Ambiente top, cerveja gelada e corte impecável. Virei cliente."],["F","Felipe A.","Fiz o Dia do Noivo com os padrinhos, todo mundo saiu alinhado."],["M","Marcos V.","Atendimento caprichado e preço justo. Recomendo demais."]];
+const card=r=>`<div class="rev"><div class="rh"><div class="av">${r[0]}</div><div><b>${r[1]}</b><br><small>★★★★★ · Google (exemplo)</small></div></div><p>“${r[2]}”</p></div>`;
+const a=R.map(card).join(''),b=[...R].reverse().map(card).join('');
+document.getElementById('t1').innerHTML=a+a;document.getElementById('t2').innerHTML=b+b;
+// navbar + progress
+const nav=document.getElementById('nav'),prog=document.getElementById('prog');
+const onS=()=>{nav.classList.toggle('scrolled',scrollY>40);const h=document.documentElement.scrollHeight-innerHeight;prog.style.transform=`scaleX(${h?scrollY/h:0})`};
+addEventListener('scroll',onS,{passive:true});onS();
+// counters
+function count(el){const to=+el.dataset.to,d=+(el.dataset.dec||0);if(RM){el.textContent=to.toFixed(d).replace('.',',');return}
+const t0=performance.now(),dur=1600;(function f(t){const p=Math.min((t-t0)/dur,1),e=1-Math.pow(1-p,3);el.textContent=(to*e).toFixed(d).replace('.',',');if(p<1)requestAnimationFrame(f)})(t0)}
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){count(e.target);io.unobserve(e.target)}}),{threshold:.6});
+document.querySelectorAll('.cnt').forEach(c=>io.observe(c));
+if(!RM){
+ // spotlight
+ const hero=document.getElementById('hero');hero.addEventListener('pointermove',e=>{const r=hero.getBoundingClientRect();hero.style.setProperty('--mx',e.clientX-r.left+'px');hero.style.setProperty('--my',e.clientY-r.top+'px')});
+ // tilt + glow
+ if(matchMedia('(hover:hover)').matches)document.querySelectorAll('.tile').forEach(t=>{t.addEventListener('pointermove',e=>{const r=t.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top;t.style.setProperty('--x',x+'px');t.style.setProperty('--y',y+'px');t.style.transform=`perspective(900px) rotateX(${(y/r.height-.5)*-8}deg) rotateY(${(x/r.width-.5)*8}deg)`});t.addEventListener('pointerleave',()=>t.style.transform='')});
+ // split words
+ document.querySelectorAll('.split-t').forEach(s=>{const g=s.classList.contains('grad');s.classList.remove('grad');s.innerHTML=s.textContent.split(' ').map(w=>`<span class="wd${g?' grad':''}">${w} </span>`).join('')});
+}
+addEventListener('DOMContentLoaded',()=>{
+ if(RM||!window.gsap){document.documentElement.classList.remove('js');return}
+ gsap.registerPlugin(ScrollTrigger);
+ if(window.Lenis){const l=new Lenis({lerp:.1});l.on('scroll',ScrollTrigger.update);gsap.ticker.add(t=>l.raf(t*1000));gsap.ticker.lagSmoothing(0);
+  document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const h=a.getAttribute('href');if(h.length>1){e.preventDefault();l.scrollTo(h,{offset:-80})}}))}
+ const tl=gsap.timeline({defaults:{ease:'power3.out'}});
+ tl.from('.hero .pill',{y:20,opacity:0,filter:'blur(8px)',duration:.7})
+   .from('#h1 .wd',{y:40,opacity:0,filter:'blur(12px)',duration:.9,stagger:.07},'-=.3')
+   .from('.hero .lead,.hero .cta,.hero .trust',{y:24,opacity:0,filter:'blur(8px)',duration:.8,stagger:.12},'-=.5')
+   .from('.nav',{y:-30,opacity:0,duration:.7},0);
+ gsap.to('#bgimg',{yPercent:18,scale:1.2,ease:'none',scrollTrigger:{trigger:'#hero',start:'top top',end:'bottom top',scrub:true}});
+ ScrollTrigger.batch('.rv',{start:'top 88%',onEnter:els=>gsap.to(els,{opacity:1,y:0,filter:'blur(0px)',duration:.9,stagger:.09,ease:'power3.out',overwrite:true})});
+ gsap.from('.stack .b',{yPercent:20,ease:'none',scrollTrigger:{trigger:'#sobre',scrub:true}});
+});
+</script>
+</body></html>

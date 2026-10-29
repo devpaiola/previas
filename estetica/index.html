@@ -1,32 +1,212 @@
 <!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Instituto Essência Estética | Site de demonstração</title><meta name="description" content="Instituto de estética com limpeza de pele, tratamentos faciais e corporais, massagens e depilação. Agende sua avaliação."><meta name="keywords" content="clínica de estética, limpeza de pele, massagem, drenagem linfática, depilação">
-<meta property="og:title" content="Instituto Essência Estética"><meta property="og:description" content="Instituto de estética com limpeza de pele, tratamentos faciais e corporais, massagens e depilação. Agende sua avaliação."><meta property="og:image" content="img/foto1.jpg"><meta property="og:type" content="website"><meta property="og:locale" content="pt_BR"><meta name="robots" content="noindex">
+<title>Instituto Essência Estética | Site de demonstração</title>
+<meta name="description" content="Instituto de estética com limpeza de pele, tratamentos faciais e corporais, massagens e depilação. Site de demonstração com empresa fictícia.">
+<meta property="og:title" content="Instituto Essência Estética"><meta property="og:image" content="img/foto1.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/foto1.jpg">
 <style>
-:root{--c1:#9c6b5e;--c2:#d9b48f;--bg:#fbf6f2}*{box-sizing:border-box;margin:0;padding:0}body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:#2b2b2b;line-height:1.6;background:#fff}
-a{color:inherit}.w{max-width:1100px;margin:auto;padding:0 20px}header{position:sticky;top:0;background:#fffe;backdrop-filter:blur(6px);z-index:9;box-shadow:0 1px 8px #0001}
-header .w{display:flex;justify-content:space-between;align-items:center;height:62px}.logo{font-weight:800;color:var(--c1);font-size:1.2rem}nav a{margin-left:18px;text-decoration:none;font-size:.95rem}nav{display:none}
-.btn{display:inline-block;background:var(--c2);color:#fff;padding:14px 26px;border-radius:40px;font-weight:700;text-decoration:none;box-shadow:0 6px 18px #0002}
-.hero{background:linear-gradient(#0008,#0006),url(img/foto1.jpg) center/cover;color:#fff;padding:110px 0 90px;text-align:center}.hero h1{font-size:2.1rem;line-height:1.2;margin-bottom:14px}.hero p{max-width:560px;margin:0 auto 26px;font-size:1.1rem}
-section{padding:64px 0}h2{text-align:center;color:var(--c1);font-size:1.8rem;margin-bottom:34px}.alt{background:var(--bg)}
-.grid{display:grid;gap:18px;grid-template-columns:1fr}.card{background:#fff;border-radius:16px;padding:24px;box-shadow:0 4px 18px #0000000d}.ic{font-size:2rem}.card h3{color:var(--c1);margin:6px 0}
-.about{display:grid;gap:28px;align-items:center}.about img{width:100%;border-radius:18px;aspect-ratio:4/3;object-fit:cover}.stats{display:flex;gap:14px;margin-top:20px;flex-wrap:wrap}.stats div{flex:1;min-width:90px;background:var(--bg);padding:14px;border-radius:12px;text-align:center}.stats b{display:block;font-size:1.4rem;color:var(--c1)}.stats span{font-size:.85rem}
-.gal{display:grid;grid-template-columns:1fr 1fr;gap:10px}.gal img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:12px}
-.note{text-align:center;font-size:.85rem;color:#777;margin:-22px 0 24px}.rev{background:#fff;border-radius:14px;padding:20px;box-shadow:0 4px 14px #0000000d}.rh{display:flex;gap:12px;align-items:center;margin-bottom:10px}.rh small{display:block;color:#e7a500}.av{width:42px;height:42px;border-radius:50%;background:var(--c1);color:#fff;display:grid;place-items:center;font-weight:700}
-table{width:100%;max-width:520px;margin:auto;border-collapse:collapse;background:#fff;border-radius:14px;overflow:hidden}td{padding:14px 18px;border-bottom:1px solid #eee}td:last-child{text-align:right;font-weight:600}
-.map{height:280px;border-radius:16px;background:repeating-linear-gradient(45deg,#e9eef0,#e9eef0 12px,#f4f7f8 12px,#f4f7f8 24px);display:grid;place-items:center;text-align:center;color:#555;border:2px dashed #c9d3d6}
-.contact{text-align:center;margin-top:22px}footer{background:#222;color:#bbb;text-align:center;padding:28px 20px;font-size:.9rem}footer small{display:block;margin-top:8px;opacity:.6;font-size:.75rem}
-.wa{position:fixed;right:18px;bottom:18px;width:60px;height:60px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 6px 18px #0004;z-index:10}
-@media(min-width:760px){nav{display:block}.hero h1{font-size:3rem}.grid{grid-template-columns:repeat(3,1fr)}.about{grid-template-columns:1fr 1fr}.gal{grid-template-columns:repeat(5,1fr)}}
+:root{--ink:#2a1d1b;--mut:#7a6661;--teal:#c48b7f;--teal2:#9a5f55;--amb:#c9a45c;--bg:#fbf6f2;--card:#fff;--line:#efe3dc}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:"Plus Jakarta Sans",system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
+.w{max-width:1180px;margin:auto;padding:0 20px}
+.demo-bar{background:var(--ink);color:#cfe;font-size:.75rem;text-align:center;padding:6px 12px;letter-spacing:.02em}
+/* navbar */
+.nav{position:fixed;left:50%;top:44px;transform:translateX(-50%);z-index:50;width:min(1100px,calc(100% - 24px));display:flex;align-items:center;justify-content:space-between;padding:10px 12px 10px 20px;border-radius:999px;transition:all .45s cubic-bezier(.2,.8,.2,1);border:1px solid transparent}
+.nav.scrolled{top:12px;background:rgba(255,255,255,.72);backdrop-filter:blur(14px) saturate(160%);-webkit-backdrop-filter:blur(14px) saturate(160%);border-color:rgba(154,95,85,.12);box-shadow:0 10px 30px -12px rgba(42,29,27,.25)}
+.logo{font-weight:800;font-size:1.1rem;display:flex;gap:8px;align-items:center;color:#fff;transition:color .3s}.nav.scrolled .logo{color:var(--ink)}
+.logo i{width:30px;height:30px;border-radius:10px;background:linear-gradient(135deg,var(--teal),var(--amb));display:grid;place-items:center;font-style:normal;font-size:1rem}
+.links{display:none;gap:4px}.links a{padding:8px 14px;border-radius:999px;font-size:.9rem;font-weight:500;color:#fff;transition:.25s}.nav.scrolled .links a{color:var(--ink)}
+.links a:hover{background:rgba(196,139,127,.15)}
+/* shimmer button */
+.shimmer{position:relative;display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border-radius:999px;font-weight:700;color:#fff;background:linear-gradient(135deg,#b97b6f,#c9a45c 60%,#b97b6f);overflow:hidden;isolation:isolate;box-shadow:0 10px 30px -8px rgba(185,123,111,.6),inset 0 1px 0 rgba(255,255,255,.25);transition:transform .25s}
+.shimmer::before{content:"";position:absolute;inset:-2px;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.55) 50%,transparent 70%);transform:translateX(-120%);animation:sh 2.8s infinite;z-index:-1}
+.shimmer:hover{transform:translateY(-2px) scale(1.02)}.shimmer.sm{padding:10px 18px;font-size:.88rem}
+@keyframes sh{60%,100%{transform:translateX(120%)}}
+.ghost{display:inline-flex;padding:14px 24px;border-radius:999px;font-weight:600;color:#fff;border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(6px);transition:.25s}.ghost:hover{background:rgba(255,255,255,.12)}
+/* hero */
+.hero{position:relative;min-height:100svh;display:grid;place-items:center;overflow:hidden;background:#1f1412;color:#fff;padding:140px 0 80px}
+.hero .bgimg{position:absolute;inset:0;background:url(img/foto1.jpg) center/cover;opacity:.32;transform:scale(1.1)}
+.aurora{position:absolute;inset:-20%;filter:blur(70px);opacity:.75;pointer-events:none}
+.aurora span{position:absolute;border-radius:50%;mix-blend-mode:screen;animation:float 18s ease-in-out infinite alternate}
+.aurora span:nth-child(1){width:55vw;height:55vw;left:5%;top:10%;background:#d8a79b}
+.aurora span:nth-child(2){width:45vw;height:45vw;right:0;top:0;background:#c9a45c;animation-duration:22s;opacity:.6}
+.aurora span:nth-child(3){width:40vw;height:40vw;left:35%;bottom:0;background:#e9c4b8;animation-duration:26s;opacity:.55}
+@keyframes float{0%{transform:translate(0,0) scale(1)}50%{transform:translate(8%,-6%) scale(1.15)}100%{transform:translate(-6%,8%) scale(.95)}}
+.spot{position:absolute;inset:0;background:radial-gradient(600px circle at var(--mx,50%) var(--my,40%),rgba(255,255,255,.12),transparent 60%);pointer-events:none}
+.grain{position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.08) 1px,transparent 1px);background-size:22px 22px;mask-image:radial-gradient(ellipse at center,#000 30%,transparent 75%);pointer-events:none}
+.hero-c{position:relative;text-align:center;max-width:880px}
+.pill{display:inline-flex;gap:8px;align-items:center;padding:6px 14px 6px 6px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);font-size:.85rem;backdrop-filter:blur(8px)}
+.pill b{background:var(--teal);color:#1f1412;padding:2px 10px;border-radius:999px;font-size:.75rem}
+.hero h1{font-size:clamp(2.4rem,6.5vw,4.8rem);line-height:1.04;letter-spacing:-.035em;font-weight:800;margin:22px 0 18px}
+.hero h1 .wd{display:inline-block;white-space:pre}
+.grad{background:linear-gradient(90deg,#f6d3c8,#e8c77e,#f6d3c8);background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:gr 6s linear infinite}
+@keyframes gr{to{background-position:200% center}}
+.hero p.lead{font-size:clamp(1rem,2vw,1.2rem);color:#f1e2dc;max-width:620px;margin:0 auto 32px}
+.cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.trust{display:flex;gap:28px;justify-content:center;margin-top:46px;flex-wrap:wrap;color:#f1e2dc;font-size:.9rem}
+.trust strong{display:block;font-size:1.8rem;color:#fff;font-weight:800;letter-spacing:-.02em}
+/* marquee */
+.marq{background:var(--ink);color:#f4e6df;overflow:hidden;padding:18px 0;border-block:1px solid rgba(255,255,255,.06)}
+.track{display:flex;gap:48px;width:max-content;animation:mq 30s linear infinite}
+.track span{font-weight:700;font-size:1.05rem;white-space:nowrap;display:flex;gap:48px;align-items:center}.track span::after{content:"✦";color:var(--amb)}
+@keyframes mq{to{transform:translateX(-50%)}}
+.marq:hover .track,.tm:hover .track{animation-play-state:paused}
+/* sections */
+section{padding:96px 0}
+.eyebrow{display:inline-block;font-size:.8rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--teal2);background:rgba(196,139,127,.1);padding:6px 12px;border-radius:999px}
+h2{font-size:clamp(1.9rem,4vw,3rem);letter-spacing:-.03em;line-height:1.1;margin:14px 0 14px;font-weight:800}
+.sub{color:var(--mut);max-width:560px}.head{margin-bottom:48px}.center{text-align:center}.center .sub{margin:auto}
+/* bento */
+.bento{display:grid;gap:16px;grid-template-columns:1fr}
+.tile{position:relative;background:var(--card);border:1px solid var(--line);border-radius:24px;padding:28px;overflow:hidden;transform-style:preserve-3d;transition:transform .2s ease,box-shadow .3s;will-change:transform}
+.tile::before{content:"";position:absolute;inset:0;border-radius:inherit;background:radial-gradient(400px circle at var(--x,50%) var(--y,50%),rgba(196,139,127,.18),transparent 45%);opacity:0;transition:opacity .3s;pointer-events:none}
+.tile:hover::before{opacity:1}.tile:hover{box-shadow:0 30px 60px -30px rgba(154,95,85,.45)}
+.tile .ic{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;font-size:1.5rem;background:linear-gradient(135deg,#f8e1da,#f5e8cc);margin-bottom:18px}
+.tile h3{font-size:1.25rem;margin-bottom:6px;letter-spacing:-.01em}.tile p{color:var(--mut);font-size:.95rem}
+.tile.img{padding:0;min-height:260px;color:#fff}.tile.img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s}
+.tile.img:hover img{transform:scale(1.06)}.tile.img .ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(31,20,18,.85),transparent 60%);display:flex;flex-direction:column;justify-content:flex-end;padding:28px}
+.tile.img p{color:#ecd6cf}
+.tile.dark{background:linear-gradient(160deg,#0b1f1c,#5a3a33);color:#fff;border-color:transparent}.tile.dark p{color:#ecd6cf}
+.tag{display:inline-block;margin-top:14px;font-size:.78rem;font-weight:700;color:#f3d9a4;background:rgba(201,164,92,.18);padding:4px 10px;border-radius:999px}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#ef4444;margin-right:6px;box-shadow:0 0 0 0 rgba(239,68,68,.7);animation:pulse 1.8s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(239,68,68,0)}100%{box-shadow:0 0 0 0 rgba(239,68,68,0)}}
+/* about */
+.about{display:grid;gap:48px;align-items:center}
+.stack{position:relative;aspect-ratio:4/4.2}.stack img{position:absolute;border-radius:24px;object-fit:cover;box-shadow:0 30px 60px -25px rgba(42,29,27,.5)}
+.stack .a{width:78%;height:80%;left:0;top:0}.stack .b{width:52%;height:52%;right:0;bottom:0;border:6px solid var(--bg)}
+.badge{position:absolute;left:8%;bottom:6%;background:#fff;border-radius:18px;padding:14px 18px;box-shadow:0 20px 40px -15px rgba(0,0,0,.3);display:flex;gap:12px;align-items:center;font-size:.85rem}
+.badge strong{font-size:1.5rem;color:var(--teal2)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:28px}
+.stats div{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px;text-align:center}
+.stats strong{display:block;font-size:1.9rem;letter-spacing:-.03em;color:var(--teal2);font-weight:800}.stats span{font-size:.82rem;color:var(--mut)}
+.checks{list-style:none;margin-top:20px;display:grid;gap:10px}.checks li{display:flex;gap:10px}.checks li::before{content:"✓";color:#fff;background:var(--teal);border-radius:50%;width:22px;height:22px;flex:none;display:grid;place-items:center;font-size:.75rem;font-weight:800}
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.gal figure{overflow:hidden;border-radius:20px;aspect-ratio:1}
+.gal img{width:100%;height:100%;object-fit:cover;transition:transform .7s,filter .7s;filter:saturate(.9)}.gal figure:hover img{transform:scale(1.08);filter:saturate(1.15)}
+/* testimonials */
+.tm{overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+.tm .track{gap:18px;animation-duration:40s}.tm .row2 .track{animation-direction:reverse}.tm .row2{margin-top:18px}
+.rev{width:340px;background:#fff;border:1px solid var(--line);border-radius:22px;padding:22px;flex:none}
+.rev .rh{display:flex;gap:12px;align-items:center;margin-bottom:10px}.av{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;font-weight:800;color:#fff;background:linear-gradient(135deg,var(--teal),var(--teal2))}
+.rev small{color:var(--amb);font-weight:700}.rev p{color:#4a3a36;font-size:.95rem}
+.note{font-size:.8rem;color:var(--mut);margin-top:10px}
+/* hours + contact */
+.split{display:grid;gap:20px}
+.panel{background:#fff;border:1px solid var(--line);border-radius:24px;padding:30px}
+.hr{display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px dashed var(--line)}.hr:last-child{border:0}.hr b{font-weight:700}
+.open{display:inline-flex;align-items:center;gap:8px;font-size:.85rem;font-weight:700;color:#15803d;background:#dcfce7;padding:4px 12px;border-radius:999px;margin-bottom:10px}
+.open i{width:8px;height:8px;border-radius:50%;background:#22c55e;animation:pulse 1.8s infinite}
+.map{min-height:260px;border-radius:24px;background:radial-gradient(circle at 50% 50%,rgba(196,139,127,.25),transparent 40%),repeating-linear-gradient(0deg,#f1e6e0 0 1px,transparent 1px 32px),repeating-linear-gradient(90deg,#f1e6e0 0 1px,transparent 1px 32px),#fff;border:1px solid var(--line);display:grid;place-items:center;text-align:center;color:var(--mut);padding:20px}
+.pin{font-size:2.4rem;animation:bob 2.4s ease-in-out infinite}@keyframes bob{50%{transform:translateY(-8px)}}
+.final{position:relative;overflow:hidden;border-radius:32px;background:#1f1412;color:#fff;text-align:center;padding:72px 24px;margin-top:20px}
+.final h2{color:#fff}.final p{color:#f1e2dc;margin-bottom:28px}
+footer{text-align:center;padding:40px 20px 90px;color:var(--mut);font-size:.88rem}footer small{display:block;margin-top:6px;opacity:.8}
+.wa{position:fixed;right:18px;bottom:18px;width:60px;height:60px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 10px 30px -6px rgba(37,211,102,.7);z-index:60;transition:transform .25s}.wa:hover{transform:scale(1.08)}
+.wa::after{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid #25d366;animation:ring 2.2s infinite}@keyframes ring{to{transform:scale(1.6);opacity:0}}
+.prog{position:fixed;top:0;left:0;height:3px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,var(--teal),var(--amb));z-index:70}
+/* reveal init (only when JS + motion ok) */
+.js .rv{opacity:0;transform:translateY(28px);filter:blur(6px)}
+@media(min-width:760px){.links{display:flex}.bento{grid-template-columns:repeat(3,1fr);grid-auto-rows:minmax(200px,auto)}.b-wide{grid-column:span 2}.b-tall{grid-row:span 2}
+.about{grid-template-columns:1fr 1fr}.gal{grid-template-columns:repeat(4,1fr)}.gal figure:first-child{grid-column:span 2;grid-row:span 2}.split{grid-template-columns:1fr 1.2fr}}
+@media(max-width:759px){.nav .shimmer.sm{padding:9px 14px;font-size:.8rem}.trust{gap:18px}section{padding:72px 0}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.js .rv{opacity:1;transform:none;filter:none}html{scroll-behavior:auto}}
+h1,h2,h3,.logo{font-family:"Cormorant Garamond",Georgia,serif}.hero h1{font-weight:600;letter-spacing:-.01em;font-size:clamp(2.7rem,7vw,5.4rem);line-height:1}h2{font-weight:600;letter-spacing:-.01em}h3{font-weight:700;font-size:1.45rem!important}.logo{font-size:1.35rem;font-weight:700}
+.hero h1 em{font-style:italic}.logo i{color:#fff}.dot{background:#c9a45c}.price{display:block;margin-top:10px;font-weight:700;color:var(--teal2);font-size:.9rem}.tile.img .price,.tile.dark .price{color:#f3d9a4}
 </style></head><body>
-<header><div class="w"><span class="logo">Essência Estética</span><nav><a href="#servicos">Serviços</a><a href="#sobre">Sobre</a><a href="#galeria">Galeria</a><a href="#depoimentos">Depoimentos</a><a href="#contato">Contato</a></nav></div></header>
-<section class="hero"><div class="w"><h1>Sua beleza natural, realçada com cuidado</h1><p>Tratamentos faciais e corporais personalizados em um espaço acolhedor e tranquilo.</p><a class="btn" href="https://wa.me/5514900000000?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação." target="_blank" rel="noopener">Agendar avaliação pelo WhatsApp</a></div></section>
-<section id="servicos" class="alt"><div class="w"><h2>Nossos serviços</h2><div class="grid"><div class="card"><span class="ic">✨</span><h3>Limpeza de pele</h3><p>Pele renovada, livre de impurezas e com viço.</p></div><div class="card"><span class="ic">🌿</span><h3>Drenagem linfática</h3><p>Reduz inchaço e melhora a circulação.</p></div><div class="card"><span class="ic">💆</span><h3>Massagem relaxante</h3><p>Alívio de tensões e bem-estar completo.</p></div><div class="card"><span class="ic">🌸</span><h3>Tratamentos faciais</h3><p>Peeling, hidratação e revitalização.</p></div><div class="card"><span class="ic">💎</span><h3>Estética corporal</h3><p>Protocolos para gordura localizada e celulite.</p></div><div class="card"><span class="ic">🪶</span><h3>Depilação</h3><p>Cera e técnicas para todos os tipos de pele.</p></div></div></div></section>
-<section id="sobre"><div class="w about"><img src="img/foto2.jpg" alt="Foto ilustrativa" loading="lazy"><div><h2 style="text-align:left">Sobre nós</h2><p>No Essência acreditamos que autocuidado é saúde. Cada protocolo começa com uma avaliação individual, para indicar apenas o que faz sentido para você, com produtos de qualidade e profissionais certificadas.</p><div class="stats"><div><b>+8</b><span>anos de experiência</span></div><div><b>+3 mil</b><span>clientes atendidas</span></div><div><b>5,0★</b><span>avaliação média</span></div></div></div></div></section>
-<section id="galeria" class="alt"><div class="w"><h2>Galeria</h2><div class="gal"><img src="img/foto2.jpg" alt="Foto ilustrativa 2 – Essência Estética" loading="lazy"><img src="img/foto3.jpg" alt="Foto ilustrativa 3 – Essência Estética" loading="lazy"><img src="img/foto4.jpg" alt="Foto ilustrativa 4 – Essência Estética" loading="lazy"><img src="img/foto5.jpg" alt="Foto ilustrativa 5 – Essência Estética" loading="lazy"><img src="img/foto6.jpg" alt="Foto ilustrativa 6 – Essência Estética" loading="lazy"></div></div></section>
-<section id="depoimentos"><div class="w"><h2>O que dizem nossos clientes</h2><p class="note">Avaliações de exemplo, apenas para demonstração.</p><div class="grid"><div class="rev"><div class="rh"><span class="av">F</span><div><b>Fernanda L.</b><small>★★★★★ · Google</small></div></div><p>“Melhor limpeza de pele que já fiz! Ambiente lindo e muito limpo.”</p></div><div class="rev"><div class="rh"><span class="av">P</span><div><b>Patrícia M.</b><small>★★★★★ · Google</small></div></div><p>“A drenagem é maravilhosa, saio outra pessoa. Profissionais super atenciosas.”</p></div><div class="rev"><div class="rh"><span class="av">C</span><div><b>Camila T.</b><small>★★★★★ · Google</small></div></div><p>“Atendimento personalizado, me senti muito bem cuidada.”</p></div></div></div></section>
-<section id="horarios" class="alt"><div class="w"><h2>Horário de funcionamento</h2><table><tr><td>Segunda a sexta</td><td>9h às 20h</td></tr><tr><td>Sábado</td><td>9h às 16h</td></tr><tr><td>Domingo</td><td>Fechado</td></tr></table></div></section>
-<section id="contato"><div class="w"><h2>Como chegar</h2><div class="map"><div>📍 <b>Mapa do Google aqui</b><br>Rua Exemplo, 000 – Centro – Cidade/SP<br><small>(endereço fictício)</small></div></div>
-<div class="contact"><p>📞 (14) 90000-0000 · ✉️ contato@exemplo.com.br</p><br><a class="btn" href="https://wa.me/5514900000000?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação." target="_blank" rel="noopener">Falar no WhatsApp</a></div></div></section>
+<div class="prog" id="prog"></div>
+<div class="demo-bar">⚠️ Site de demonstração — empresa, endereço, telefones e avaliações são fictícios.</div>
+<nav class="nav" id="nav"><a href="#" class="logo"><i>✿</i>Essência</a>
+<div class="links"><a href="#servicos">Tratamentos</a><a href="#sobre">Sobre</a><a href="#galeria">Espaço</a><a href="#depoimentos">Depoimentos</a><a href="#contato">Contato</a></div>
+<a class="shimmer sm" href="https://wa.me/5514900000000?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação%20no%20Instituto%20Essência." target="_blank" rel="noopener">Agendar</a></nav>
+<header class="hero" id="hero"><div class="bgimg" id="bgimg"></div><div class="aurora"><span></span><span></span><span></span></div><div class="grain"></div><div class="spot"></div>
+<div class="w hero-c">
+<span class="pill hi"><b>Novo</b> Avaliação facial personalizada</span>
+<h1 id="h1"><span class="split-t">Realce a sua beleza</span><br><span class="grad split-t">com naturalidade.</span></h1>
+<p class="lead hi">Tratamentos faciais e corporais, limpeza de pele, massagens e depilação — protocolos personalizados num espaço pensado para o seu bem-estar.</p>
+<div class="cta hi"><a class="shimmer" href="https://wa.me/5514900000000?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação%20no%20Instituto%20Essência." target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 32 32" fill="#fff"><path d="M16 3C9 3 3.4 8.6 3.4 15.5c0 2.4.7 4.7 1.9 6.7L3 29l7-2.2c1.9 1 4 1.6 6 1.6 7 0 12.6-5.6 12.6-12.5S23 3 16 3zm6.3 17.6c-.3.8-1.5 1.5-2.1 1.6-.6.1-1.2.1-1.9-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3.1s.8-2.2 1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5.2.6.8 2 .9 2.1.1.1.1.3 0 .5-.1.2-.1.3-.3.5l-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.6 2.1 1.1 1 2 1.3 2.3 1.4.3.1.5.1.6-.1.2-.2.7-.8.9-1.1.2-.3.4-.2.6-.1.3.1 1.6.8 1.9.9.3.1.5.2.5.3.1.2.1.8-.1 1.5z"/></svg>Agendar avaliação</a><a class="ghost" href="#servicos">Ver tratamentos</a></div>
+<div class="trust hi"><div><strong><span class="cnt" data-to="5" data-dec="1">0</span>★</strong>avaliação média</div><div><strong>+<span class="cnt" data-to="3">0</span> mil</strong>clientes atendidas</div><div><strong>+<span class="cnt" data-to="8">0</span> anos</strong>de experiência</div></div>
+</div></header>
+<div class="marq" aria-hidden="true"><div class="track"><span>Limpeza de pele</span><span>Peeling</span><span>Microagulhamento</span><span>Drenagem linfática</span><span>Massagem relaxante</span><span>Depilação</span><span>Design de sobrancelhas</span><span>Limpeza de pele</span><span>Peeling</span><span>Microagulhamento</span><span>Drenagem linfática</span><span>Massagem relaxante</span><span>Depilação</span><span>Design de sobrancelhas</span></div></div>
+<main>
+<section id="servicos"><div class="w">
+<div class="head rv"><span class="eyebrow">Tratamentos</span><h2>Cuidado sob medida,<br>do rosto ao corpo.</h2><p class="sub">Cada protocolo começa com uma avaliação individual, para indicar apenas o que faz sentido para você.</p></div>
+<div class="bento">
+<div class="tile img b-wide b-tall rv"><img src="img/foto2.jpg" alt="Foto ilustrativa de tratamento facial" loading="lazy"><div class="ov"><span class="eyebrow" style="background:rgba(255,255,255,.15);color:#fff;width:max-content">Mais procurado</span><h3 style="font-size:2rem!important;margin-top:10px">Limpeza de pele profunda</h3><p>Extração, esfoliação, máscara calmante e hidratação para uma pele leve e luminosa.</p><span class="price">a partir de R$ 000 (valor fictício)</span></div></div>
+<div class="tile rv"><div class="ic">✨</div><h3>Tratamentos faciais</h3><p>Peeling, microagulhamento e revitalização para textura, manchas e viço.</p></div>
+<div class="tile rv"><div class="ic">🌿</div><h3>Drenagem linfática</h3><p>Reduz o inchaço e traz sensação de leveza imediata.</p></div>
+<div class="tile rv"><div class="ic">💆‍♀️</div><h3>Massagens</h3><p>Relaxante, modeladora e com pedras quentes.</p></div>
+<div class="tile rv"><div class="ic">🌸</div><h3>Depilação</h3><p>Cera e técnicas suaves, com cuidado para peles sensíveis.</p></div>
+<div class="tile dark rv"><div class="ic">💎</div><h3>Dia da Noiva</h3><p>Pacote completo de preparação para o grande dia.</p><span class="tag"><span class="dot"></span>Agenda aberta</span></div>
+</div></div></section>
+<section id="sobre" style="background:#fff"><div class="w about">
+<div class="stack rv"><img class="a" src="img/foto3.jpg" alt="Foto ilustrativa do espaço" loading="lazy"><img class="b" src="img/foto4.jpg" alt="Foto ilustrativa de atendimento" loading="lazy"><div class="badge"><strong>✿</strong><div><b>Atendimento exclusivo</b><br>uma cliente por vez</div></div></div>
+<div class="rv"><span class="eyebrow">Sobre nós</span><h2>Autocuidado é saúde — e merece tempo.</h2>
+<p class="sub">No Essência, profissionais certificadas combinam técnica, produtos de qualidade e um ambiente acolhedor para resultados naturais e duradouros.</p>
+<ul class="checks"><li>Avaliação individual antes de cada protocolo</li><li>Materiais descartáveis e biossegurança rigorosa</li><li>Produtos dermatologicamente testados</li></ul>
+<div class="stats"><div><strong>+<span class="cnt" data-to="8">0</span></strong><span>anos de experiência</span></div><div><strong>+<span class="cnt" data-to="3">0</span> mil</strong><span>clientes atendidas</span></div><div><strong><span class="cnt" data-to="5" data-dec="1">0</span>★</strong><span>avaliação média</span></div></div></div>
+</div></section>
+<section id="galeria"><div class="w">
+<div class="head center rv"><span class="eyebrow">Nosso espaço</span><h2>Um refúgio para você</h2></div>
+<div class="gal"><figure class="rv"><img src="img/foto5.jpg" alt="Foto ilustrativa 1" loading="lazy"></figure><figure class="rv"><img src="img/foto2.jpg" alt="Foto ilustrativa 2" loading="lazy"></figure><figure class="rv"><img src="img/foto3.jpg" alt="Foto ilustrativa 3" loading="lazy"></figure><figure class="rv"><img src="img/foto6.jpg" alt="Foto ilustrativa 4" loading="lazy"></figure><figure class="rv"><img src="img/foto4.jpg" alt="Foto ilustrativa 5" loading="lazy"></figure></div>
+</div></section>
+<section id="depoimentos" style="background:#fff;overflow:hidden"><div class="w head center rv"><span class="eyebrow">Depoimentos</span><h2>Clientes que se sentem em casa</h2><p class="note">Avaliações de exemplo, apenas para demonstração.</p></div>
+<div class="tm"><div class="track" id="t1"></div></div><div class="tm row2"><div class="track" id="t2"></div></div>
+</section>
+<section id="contato"><div class="w">
+<div class="head center rv"><span class="eyebrow">Visite a gente</span><h2>Horários e como chegar</h2></div>
+<div class="split"><div class="panel rv"><span class="open"><i></i>Aberto hoje</span>
+<div class="hr"><span>Segunda a sexta</span><b>9h às 20h</b></div><div class="hr"><span>Sábado</span><b>9h às 16h</b></div><div class="hr"><span>Domingo</span><b>Fechado</b></div>
+<p style="margin-top:18px;color:var(--mut)">📞 (14) 90000-0000<br>✉️ contato@exemplo.com.br</p></div>
+<div class="map rv"><div><div class="pin">📍</div><b>Mapa do Google aqui</b><br>Rua Exemplo, 000 – Centro – Cidade/SP<br><small>(endereço fictício)</small></div></div></div>
+<div class="final rv"><div class="aurora" style="opacity:.5"><span></span><span></span><span></span></div><div style="position:relative"><h2>Você merece esse momento.</h2><p>Agende sua avaliação em menos de 1 minuto pelo WhatsApp.</p><a class="shimmer" href="https://wa.me/5514900000000?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação%20no%20Instituto%20Essência." target="_blank" rel="noopener">Falar no WhatsApp →</a></div></div>
+</div></section>
+</main>
 <footer>© 2026 Instituto Essência Estética — empresa fictícia<small>Site de demonstração, criado por Fabrício</small></footer>
-<a class="wa" href="https://wa.me/5514900000000?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação." target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="32" height="32" viewBox="0 0 32 32" fill="#fff"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.6a10.6 10.6 0 0 1-5.4-1.5l-.4-.2-3.9 1 1-3.8-.2-.4A10.6 10.6 0 1 1 16 26.6zm5.8-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1a8.7 8.7 0 0 1-4.3-3.8c-.3-.6.3-.5.9-1.7.1-.2 0-.4 0-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.6 3.6 0 0 0-1.1 2.7 6.3 6.3 0 0 0 1.3 3.3 14.4 14.4 0 0 0 5.5 4.9c2 .9 2.8.9 3.8.8a3.3 3.3 0 0 0 2.2-1.5 2.7 2.7 0 0 0 .2-1.5c-.1-.2-.3-.3-.5-.4z"/></svg></a>
+<a class="wa" href="https://wa.me/5514900000000?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação%20no%20Instituto%20Essência." target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="32" height="32" viewBox="0 0 32 32" fill="#fff"><path d="M16 3C9 3 3.4 8.6 3.4 15.5c0 2.4.7 4.7 1.9 6.7L3 29l7-2.2c1.9 1 4 1.6 6 1.6 7 0 12.6-5.6 12.6-12.5S23 3 16 3zm6.3 17.6c-.3.8-1.5 1.5-2.1 1.6-.6.1-1.2.1-1.9-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3.1s.8-2.2 1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5.2.6.8 2 .9 2.1.1.1.1.3 0 .5-.1.2-.1.3-.3.5l-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.6 2.1 1.1 1 2 1.3 2.3 1.4.3.1.5.1.6-.1.2-.2.7-.8.9-1.1.2-.3.4-.2.6-.1.3.1 1.6.8 1.9.9.3.1.5.2.5.3.1.2.1.8-.1 1.5z"/></svg></a>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+<script>
+const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+if(!RM)document.documentElement.classList.add('js');
+// testimonials
+const R=[["F","Fernanda A.","A limpeza de pele foi a melhor que já fiz. Ambiente lindo e super cheiroso!"],["L","Larissa M.","Profissionais muito delicadas, explicaram cada etapa do peeling."],["P","Patrícia G.","A drenagem mudou minha rotina, saio leve toda semana."],["C","Camila R.","Fiz o Dia da Noiva aqui e foi perfeito, me senti muito cuidada."],["V","Vanessa T.","Pontualidade, higiene impecável e resultado natural. Recomendo!"],["D","Débora S.","A massagem com pedras quentes é um presente. Virei cliente fiel."]];
+const card=r=>`<div class="rev"><div class="rh"><div class="av">${r[0]}</div><div><b>${r[1]}</b><br><small>★★★★★ · Google (exemplo)</small></div></div><p>“${r[2]}”</p></div>`;
+const a=R.map(card).join(''),b=[...R].reverse().map(card).join('');
+document.getElementById('t1').innerHTML=a+a;document.getElementById('t2').innerHTML=b+b;
+// navbar + progress
+const nav=document.getElementById('nav'),prog=document.getElementById('prog');
+const onS=()=>{nav.classList.toggle('scrolled',scrollY>40);const h=document.documentElement.scrollHeight-innerHeight;prog.style.transform=`scaleX(${h?scrollY/h:0})`};
+addEventListener('scroll',onS,{passive:true});onS();
+// counters
+function count(el){const to=+el.dataset.to,d=+(el.dataset.dec||0);if(RM){el.textContent=to.toFixed(d).replace('.',',');return}
+const t0=performance.now(),dur=1600;(function f(t){const p=Math.min((t-t0)/dur,1),e=1-Math.pow(1-p,3);el.textContent=(to*e).toFixed(d).replace('.',',');if(p<1)requestAnimationFrame(f)})(t0)}
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){count(e.target);io.unobserve(e.target)}}),{threshold:.6});
+document.querySelectorAll('.cnt').forEach(c=>io.observe(c));
+if(!RM){
+ // spotlight
+ const hero=document.getElementById('hero');hero.addEventListener('pointermove',e=>{const r=hero.getBoundingClientRect();hero.style.setProperty('--mx',e.clientX-r.left+'px');hero.style.setProperty('--my',e.clientY-r.top+'px')});
+ // tilt + glow
+ if(matchMedia('(hover:hover)').matches)document.querySelectorAll('.tile').forEach(t=>{t.addEventListener('pointermove',e=>{const r=t.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top;t.style.setProperty('--x',x+'px');t.style.setProperty('--y',y+'px');t.style.transform=`perspective(900px) rotateX(${(y/r.height-.5)*-8}deg) rotateY(${(x/r.width-.5)*8}deg)`});t.addEventListener('pointerleave',()=>t.style.transform='')});
+ // split words
+ document.querySelectorAll('.split-t').forEach(s=>{const g=s.classList.contains('grad');s.classList.remove('grad');s.innerHTML=s.textContent.split(' ').map(w=>`<span class="wd${g?' grad':''}">${w} </span>`).join('')});
+}
+addEventListener('DOMContentLoaded',()=>{
+ if(RM||!window.gsap){document.documentElement.classList.remove('js');return}
+ gsap.registerPlugin(ScrollTrigger);
+ if(window.Lenis){const l=new Lenis({lerp:.1});l.on('scroll',ScrollTrigger.update);gsap.ticker.add(t=>l.raf(t*1000));gsap.ticker.lagSmoothing(0);
+  document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const h=a.getAttribute('href');if(h.length>1){e.preventDefault();l.scrollTo(h,{offset:-80})}}))}
+ const tl=gsap.timeline({defaults:{ease:'power3.out'}});
+ tl.from('.hero .pill',{y:20,opacity:0,filter:'blur(8px)',duration:.7})
+   .from('#h1 .wd',{y:40,opacity:0,filter:'blur(12px)',duration:.9,stagger:.07},'-=.3')
+   .from('.hero .lead,.hero .cta,.hero .trust',{y:24,opacity:0,filter:'blur(8px)',duration:.8,stagger:.12},'-=.5')
+   .from('.nav',{y:-30,opacity:0,duration:.7},0);
+ gsap.to('#bgimg',{yPercent:18,scale:1.2,ease:'none',scrollTrigger:{trigger:'#hero',start:'top top',end:'bottom top',scrub:true}});
+ ScrollTrigger.batch('.rv',{start:'top 88%',onEnter:els=>gsap.to(els,{opacity:1,y:0,filter:'blur(0px)',duration:.9,stagger:.09,ease:'power3.out',overwrite:true})});
+ gsap.from('.stack .b',{yPercent:20,ease:'none',scrollTrigger:{trigger:'#sobre',scrub:true}});
+});
+</script>
 </body></html>
